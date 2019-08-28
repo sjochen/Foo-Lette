@@ -1,3 +1,2 @@
 DROP DATABASE IF EXISTS fooLette_db;
 CREATE DATABASE fooLette_db;
-
