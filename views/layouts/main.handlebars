@@ -3,24 +3,50 @@
 
 <head>
   <meta charset="utf-8">
+  <title>
+    {{# if loggedin}}
+    Welcome {{userName}}
+    {{else }}
+    Foo-Lette
+    {{/if}}
+  </title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/styles/styles.css" media="screen" title="Foo-Lette" charset="utf-8">
-  <title>Home Page</title>
+  <link rel="stylesheet" href="styles/styles.css" media="screen" title="Foo-Lette" charset="utf-8">
+
 </head>
 
-<body>
+<body class="container">
 
-  <div class="header">
-      <div class="nav">
-        <ul class="menu-bar">
-          <li class="logo"><img src="styles/finallogo.png"></li>
-          
-        </ul>
-      </div>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li class="logo"><img src="styles/finallogo.png"></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/registration">Sign Up</a></li>
+        <li><a href="/dashboard">Dashboard</a></li>
+      </ul>
 
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      <ul class="nav navbar-nav navbar-right">
+        {{# if loggedin}}
+        <li><a href="/logout">Log Out</a></li>
+        {{else }}
+        <li><a href="/login">Log In</a></li>
+        {{/if}}
+
+      </ul>
+
+    </div>
+  </nav>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
   {{{body}}}
 </body>
 

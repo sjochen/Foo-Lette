@@ -1,22 +1,30 @@
+body {
+  background-image: url("./finalbackground.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .form {
   width: 300px;
   margin: 0 auto;
   font-family: Tahoma, Geneva, sans-serif;
 }
+
 .form h1 {
   text-align: center;
-  color: #4d4d4d;
-  font-size: 24px;
+  color: #db1a1a;
+  font-size: 50px;
   padding: 20px 0 20px 0;
 }
-.form input[type="password"],
-.form input[type="text"], .form input[type="email"] {
+
+.form input[type="password"], .form input[type="text"], .form input[type="email"] {
   width: 100%;
   padding: 15px;
   border: 1px solid #dddddd;
   margin-bottom: 15px;
-  box-sizing:border-box;
+  box-sizing: border-box;
 }
+
 .form input[type="submit"] {
   width: 100%;
   padding: 15px;
@@ -27,42 +35,35 @@
   font-weight: bold;
   color: #ffffff;
 }
+
 * {
-  padding:0px;
-  margin:0px;
-  box-sizing:border-box;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
 
 .header {
   height: 800px;
   width: 100%;
-  background: url(finalbackground.jpg); 
-  background-repeat:no-repeat;
-background-size: cover;
-
-  
 }
 
 .nav .menu-bar {
-  width:100%;
-  text-align:center;
+  width: 100%;
+  text-align: center;
   box-shadow: 1px 2px 4px grey;
-  background: rgba(2,2,2,0.2);
+  background: rgba(2, 2, 2, 0.2);
   height: 120px;
-  
-
 }
 
-.menu-bar li{
+.menu-bar li {
   list-style-type: none;
-  display:inline-block;
-  padding:30px;
+  display: inline-block;
+  padding: 30px;
   margin: 0px 20px;
-  
 }
 
 .logo {
- float: left;
+  float: left;
 }
 
 #logout {
@@ -74,4 +75,6 @@ background-size: cover;
   margin-top: 100px;
 }
 
-input[type='radio'] { transform: scale(1.5); }
+input[type='radio'] {
+  transform: scale(1.5);
+}
