@@ -1,5 +1,5 @@
 // Get references to page elements
-var $exampleText = $("#example-text");
+var $userText = $("#example-text");
 var $exampleDescription = $("#example-description");
 var $submitBtn = $("#submit");
 var $exampleList = $("#example-list");
@@ -61,11 +61,11 @@ var refreshExamples = function() {
 
 // handleFormSubmit is called whenever we submit a new example
 // Save the new example to the db and refresh the list
-var handleFormSubmit = function(event) {
+var handleLoginSubmit = function(event) {
   event.preventDefault();
 
-  var example = {
-    text: $exampleText.val().trim(),
+  var userToFind = {
+    user: $exampleText.val().trim(),
     description: $exampleDescription.val().trim()
   };
 
