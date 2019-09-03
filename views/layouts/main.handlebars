@@ -21,16 +21,37 @@
     <div class="container-fluid">
       <ul class="nav navbar-nav">
         <li class="logo"><img src="styles/finallogo.png"></li>
-        <li><a href="/">Home</a></li>
-        <li><a href="/registration">Sign Up</a></li>
-        <li><a href="/dashboard">Dashboard</a></li>
+        {{#if loggedin}}
+        <li><a href="/"><button type="button" class="btn btn-primary btn-lg btn-light">
+              Dashboard</button></a></li>
+        {{else}}
+        <li><a href="/registration"><button type="button" class="btn btn-primary btn-lg btn-light">
+              Sign Up</button></a></li>
+        {{/if}}
       </ul>
 
+
+
+      {{!-- Right side of nav --}}
       <ul class="nav navbar-nav navbar-right">
         {{# if loggedin}}
-        <li><a href="/logout">Log Out</a></li>
+        <li id="logout"><a href="/logout"><button type="button" class="btn btn-primary btn-lg btn-light">
+              Log Out</button>
+          </a>
+        </li>
+        <br>
+        <li id="favorites"><a href="#"><button type="button" class="btn btn-primary btn-lg btn">
+              Favorites</button>
+          </a>
+        </li>
+
         {{else }}
-        <li><a href="/index">Log In</a></li>
+        <li id="login"><a href="/index"><button type="button" class="btn btn-primary btn-lg btn-light">
+              Log In</button>
+          </a>
+        </li>
+
+
         {{/if}}
 
       </ul>
@@ -47,7 +68,8 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
-  {{{body}}}
+
 </body>
+{{{body}}}
 
 </html>
