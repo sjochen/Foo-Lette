@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>
     {{# if loggedin}}
-    Welcome {{userName}}
+    Welcome {{user}}
     {{else }}
     Foo-Lette
     {{/if}}
@@ -30,7 +30,7 @@
         {{# if loggedin}}
         <li><a href="/logout">Log Out</a></li>
         {{else }}
-        <li><a href="/login">Log In</a></li>
+        <li><a href="/index">Log In</a></li>
         {{/if}}
 
       </ul>
