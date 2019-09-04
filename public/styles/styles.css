@@ -1,7 +1,7 @@
 body {
   background-image: url("./finalbackground.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 150%;
+  background-repeat: no-repeat; 
 }
 
 .form {
