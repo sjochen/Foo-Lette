@@ -15,50 +15,42 @@
 
 </head>
 
-<body class="container">
+<body>
 
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <ul class="nav navbar-nav">
-        <li class="logo"><img src="styles/finallogo.png"></li>
-        {{#if loggedin}}
-        <li><a href="/"><button type="button" class="btn btn-primary btn-lg btn-light">
-              Dashboard</button></a></li>
-        {{else}}
-        <li><a href="/registration"><button type="button" class="btn btn-primary btn-lg btn-light">
-              Sign Up</button></a></li>
-        {{/if}}
-      </ul>
-
-
-
+  <nav class="nav navbar navbar-default">
+    <div class="menu-bar container-fluid">
+      
+       <img class="logo" src="styles/finallogo.png"alt="Page Logo">
+      
+      
       {{!-- Right side of nav --}}
-      <ul class="nav navbar-nav navbar-right">
+      <ul class=" nav navbar-nav navbar-right">
         {{# if loggedin}}
         <li id="logout"><a href="/logout"><button type="button" class="btn btn-primary btn-lg btn-light">
               Log Out</button>
           </a>
         </li>
         <br>
-        <li id="favorites"><a href="#"><button type="button" class="btn btn-primary btn-lg btn">
+        <li id="favorites"><a href="#"><button type="button" class="btn btn-primary btn-lg btn btn-light">
               Favorites</button>
           </a>
         </li>
-
+        <li id="dashboard"><a href="/"><button type="button" class="btn btn-primary btn-lg btn-light">
+              Dashboard</button>
+          </a>
+        </li>
         {{else }}
-        <li id="login"><a href="/index"><button type="button" class="btn btn-primary btn-lg btn-light">
-              Log In</button>
+        <li id="signup"><a href="/registration"><button type="button" class="btn btn-primary btn-lg btn-light">
+              Sign Up</button>
           </a>
         </li>
 
-
         {{/if}}
-
       </ul>
 
     </div>
   </nav>
-
+{{{body}}}
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
@@ -70,6 +62,6 @@
     crossorigin="anonymous"></script>
 
 </body>
-{{{body}}}
+
 
 </html>
