@@ -1,8 +1,10 @@
-$submitBtn.on("click", randomRest);
+$("#submit").on("click", randomRest);
+
+
 var API = {
     getRest: function() {
       return $.ajax({
-        url: "api/examples",
+        url: "/api/examples",
         type: "GET"
       });
     },
@@ -14,10 +16,12 @@ var API = {
     }
   };
 
-var randomRest = function() {
-  API.getRes().then(function(data) {
 
-  });
+  var randomRest = function() {
+    console.log("It Worked!!")
+  // API.getRes().then(function(data) {
+
+  // });
 };
 
 
