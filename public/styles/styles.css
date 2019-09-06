@@ -80,29 +80,7 @@ img {
   margin-top:20px;
 }
 
-#logout {
-  float: right;
-}
 
-#favorites{
-  float: right;
-}
-
-#login {
- 
-  margin-bottom:100px;
-}
-
-#dashboard{
-  float:right;
-  margin-right:100px;
-}
-
-#signup{
-  float:right;
-  margin-bottom:100px;
-  margin-right:30px;
-}
 
 .row {
   margin-left: 50px;
@@ -111,6 +89,23 @@ img {
 
 input[type='radio'] {
   transform: scale(1.5);
+}
+
+
+
+
+.buttons {
+margin-bottom:75px;
+margin-right:50px;
+}
+
+#button1 {
+  color:black !important;
+  
+}
+
+a {
+  color:black;
 }
 
 

@@ -24,29 +24,32 @@
       
       
       {{!-- Right side of nav --}}
-      <ul class=" nav navbar-nav navbar-right">
+      <div class="buttons">
         {{# if loggedin}}
-        <li id="logout"><a href="/logout"><button type="button" class="btn btn-primary btn-lg btn-light">
-              Log Out</button>
-          </a>
-        </li>
-        <br>
-        <li id="favorites"><a href="#"><button type="button" class="btn btn-primary btn-lg btn btn-light">
+        <button id="button1" type="button" class="btn  btn-lg btn-light"><a href="/logout">
+              Log Out</a></button>
+          
+        
+       
+        <button id="button2" type="button" class="btn btn-lg btn-light"><a href="#">
               Favorites</button>
           </a>
-        </li>
-        <li id="dashboard"><a href="/"><button type="button" class="btn btn-primary btn-lg btn-light">
+        
+        <button id="button3" type="button" class="btn btn-lg btn-light"><a href="/">
               Dashboard</button>
           </a>
-        </li>
+       
         {{else }}
-        <li id="signup"><a href="/registration"><button type="button" class="btn btn-primary btn-lg btn-light">
+        <button id="button2" type="button" class="btn btn-lg btn-light"><a href="/registration">
               Sign Up</button>
           </a>
-        </li>
+       
 
         {{/if}}
-      </ul>
+        
+
+
+      </div>
 
     </div>
   </nav>
