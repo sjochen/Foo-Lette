@@ -1,28 +1,22 @@
-$("#submit").on("click", randomRest);
+$(document).ready(function(){
+  console.log("ready");
 
 
-var API = {
-    getRest: function() {
-      return $.ajax({
-        url: "/api/examples",
-        type: "GET"
-      });
-    },
-    deleteExample: function(id) {
-      return $.ajax({
-        url: "api/examples/" + id,
-        type: "DELETE"
-      });
-    }
-  };
+  $("#submit").on("click", () => {
+    console.log("Clicked");
+    $.ajax({
+      url: "/api/examples",
+      type: "GET"
+    }).then(function(data){
+      console.log(data);
+    })
+    
+
+  });
 
 
-  var randomRest = function() {
-    console.log("It Worked!!")
-  // API.getRes().then(function(data) {
 
-  // });
-};
+});
 
 
 
