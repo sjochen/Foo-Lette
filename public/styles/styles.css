@@ -1,7 +1,12 @@
+html{
+  height:100%;
+  
+}
+
 body {
   background-image: url("./finalbackground.jpg");
+  background-size: 100% 100%;
   background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .form {
@@ -53,22 +58,29 @@ body {
   box-shadow: 1px 2px 4px grey;
   background: rgba(2, 2, 2, 0.2);
   height: 120px;
+  padding:0px;
+  margin:0px;
 }
 
-.menu-bar li {
+.navbar {
+  padding:0px;
+}
+
+.menu-bar {
   list-style-type: none;
   display: inline-block;
   padding: 30px;
   margin: 0px 20px;
 }
 
-.logo {
-  float: left;
+
+
+img {
+  margin-left: 40px;
+  margin-top:20px;
 }
 
-#logout {
-  float: right;
-}
+
 
 .row {
   margin-left: 50px;
@@ -78,3 +90,22 @@ body {
 input[type='radio'] {
   transform: scale(1.5);
 }
+
+
+
+
+.buttons {
+margin-bottom:75px;
+margin-right:50px;
+}
+
+#button1 {
+  color:black !important;
+  
+}
+
+a {
+  color:black;
+}
+
+

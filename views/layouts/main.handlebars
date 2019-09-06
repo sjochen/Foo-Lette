@@ -22,49 +22,45 @@
 
 </head>
 
-<body class="container">
+<body>
 
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <ul class="nav navbar-nav">
-        <li class="logo"><img src="styles/finallogo.png"></li>
-        {{#if loggedin}}
-        <li><a href="/"><button type="button" class="btn btn-primary btn-lg btn-light">
-              Dashboard</button></a></li>
-        {{else}}
-        <li><a href="/registration"><button type="button" class="btn btn-primary btn-lg btn-light">
-              Sign Up</button></a></li>
-        {{/if}}
-      </ul>
-
-
-
+  <nav class="nav navbar navbar-default">
+    <div class="menu-bar container-fluid">
+      
+       <img class="logo" src="styles/finallogo.png"alt="Page Logo">
+      
+      
       {{!-- Right side of nav --}}
-      <ul class="nav navbar-nav navbar-right">
+      <div class="buttons">
         {{# if loggedin}}
-        <li id="logout"><a href="/logout"><button type="button" class="btn btn-primary btn-lg btn-light">
-              Log Out</button>
-          </a>
-        </li>
-        <br>
-        <li id="favorites"><a href="#"><button type="button" class="btn btn-primary btn-lg btn">
+        <button id="button1" type="button" class="btn  btn-lg btn-light"><a href="/logout">
+              Log Out</a></button>
+          
+        
+       
+        <button id="button2" type="button" class="btn btn-lg btn-light"><a href="#">
               Favorites</button>
           </a>
-        </li>
-
-        {{else }}
-        <li id="login"><a href="/index"><button type="button" class="btn btn-primary btn-lg btn-light">
-              Log In</button>
+        
+        <button id="button3" type="button" class="btn btn-lg btn-light"><a href="/">
+              Dashboard</button>
           </a>
-        </li>
-
+       
+        {{else }}
+        <button id="button2" type="button" class="btn btn-lg btn-light"><a href="/registration">
+              Sign Up</button>
+          </a>
+       
 
         {{/if}}
+        
 
-      </ul>
+
+      </div>
 
     </div>
   </nav>
+
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -72,7 +68,10 @@
 
 
 
-</body>
 {{{body}}}
+ 
+
+</body>
+
 
 </html>
