@@ -2,7 +2,7 @@ var express = require('express');
 var app = express.Router();
 var axios = require('axios');
 
-var url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&radius=1500&type=restaurant&keyword=cruise&key=" + process.env.API_KEY;
+var url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=	37.541290,-77.434769&radius=15000&type=restaurant&&key=" + process.env.API_KEY;
 
 module.exports = function(app){
 
@@ -10,7 +10,7 @@ module.exports = function(app){
     
     axios.get(url).then(function(response){
       
-      res.json(response.data)
+      res.json(response.data.results)
 
     });
 
@@ -20,15 +20,3 @@ module.exports = function(app){
 
 
 };
-
-
-
-
-
-
-// app.get("/api/posts/", function(req, res) {
-//   db.Post.findAll({})
-//     .then(function(dbPost) {
-//       res.json(dbPost);
-//     });
-// });
